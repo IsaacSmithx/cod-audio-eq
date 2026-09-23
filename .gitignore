@@ -1,0 +1,32 @@
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Local/private audio or streaming data
+*.wav
+*.mp3
+*.mp4
+*.mkv
+*.mov
+*.flv
+*.aac
+
+# OBS/security-sensitive exports
+*stream*key*
+*token*
+*secret*
+secrets/
+.env
+.env.*
+
+# Generated archives
+*.zip
+*.7z
+*.rar
