@@ -1,0 +1,21 @@
+# ============================================================
+# COD Audio EQ - PROFILE: V1 (Daily / Conservative)
+# Scope: Elgato 4K X capture endpoint ONLY
+# Endpoint GUID (previously verified): {2c1698c1-ea24-4e48-b5d5-3f23da2cc025}
+#
+# This file is a git-tracked reference copy of the filter values you
+# provided. It is NOT read from your live machine - treat your local
+# C:\Users\isaac\Documents\Codex\cod-eq-v1.ps1 as the source of truth
+# and diff it against this before assuming they match.
+# ============================================================
+
+Preamp: -4.5 dB
+
+Filter 1: ON HPQ Fc 35 Hz Q 0.70
+Filter 2: ON PK Fc 90 Hz Gain -2.5 dB Q 0.80
+Filter 3: ON PK Fc 180 Hz Gain -1.5 dB Q 1.00
+Filter 4: ON PK Fc 850 Hz Gain 1.0 dB Q 1.10
+Filter 5: ON PK Fc 1800 Hz Gain 1.8 dB Q 1.00
+Filter 6: ON PK Fc 3200 Hz Gain 2.2 dB Q 1.20
+Filter 7: ON PK Fc 5200 Hz Gain 1.4 dB Q 1.00
+Filter 8: ON PK Fc 8200 Hz Gain -1.0 dB Q 1.20
