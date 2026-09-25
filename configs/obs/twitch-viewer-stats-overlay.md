@@ -34,6 +34,9 @@ Good for: minimal setup, privacy-conscious, don't want a dashboard account.
 Limits: no follower alert animations, no unified stream-stats dashboard,
 you maintain the wrapper page yourself if you want styling/auto-refresh.
 
+**Chosen setup: Option B, StreamElements.** Steps below are the actual
+walkthrough to follow.
+
 ## Option B — StreamElements (recommended for most people)
 
 Free, browser-based (no desktop app required), widely used. Gives you a
@@ -41,20 +44,38 @@ viewer counter, follower goal bar, and an alert box (pop-up + sound when
 someone follows/subs/donates) as ready-made overlay URLs you paste into
 OBS Browser Sources — no OBS plugin needed.
 
-Setup (once you say go-ahead, since step 1 connects your Twitch account):
+Setup — this is a manual, one-time walkthrough you do yourself: signing in
+with your own Twitch account is a login step only you should perform
+(don't hand credentials to anything else, including an assistant).
 
-1. Go to streamelements.com and sign in **with Twitch** (this is the
-   account-connect step — it requests read access to your channel's
-   follows/stream status, not posting/moderation rights unless you grant
-   them).
-2. In the StreamElements dashboard: **Overlays** → create/edit an overlay →
-   add a **Viewer Count** widget and/or **Follower Goal** widget and/or
-   **Alertbox** widget.
-3. Each overlay has a unique "Overlay URL" — copy it.
-4. In OBS: Add **Browser Source** → paste that URL → set canvas-matching
-   width/height → OBS renders it live, transparent background included.
-5. Test alerts from the StreamElements dashboard's "Test Alert" button
-   before going live.
+1. Go to **streamelements.com** → click **Sign in / Get Started** → choose
+   **Sign in with Twitch**. Approve the OAuth prompt (it asks for read
+   access to your channel/follows/stream status — you don't need to grant
+   chat/moderation scopes for this use case).
+2. In the dashboard sidebar, go to **My Overlays** (sometimes shown as
+   **Overlays**) → **+ Add Overlay** → **Create empty overlay** (or start
+   from a template if you want pre-made styling).
+3. Inside the overlay editor, use the widget panel to drag in:
+   - **Viewer Count** (may be listed as "Follower/Viewer Count" or under
+     "Stream Stats") — shows live viewer count, and follower count if you
+     add that field too.
+   - **Alertbox** — pop-up + sound whenever someone follows (also covers
+     subs/raids/donations if you want them later). This is your "who's
+     following" live activity.
+   - Optional: **Follower Goal** bar, **Recent Events** widget for a
+     scrolling follow/sub log.
+   Resize/position each widget within the overlay canvas as you'd like it
+   to appear on stream, then **Save**.
+4. Click **Overlay settings** (or the "..." menu) → copy the overlay's
+   unique **Browser Source URL**.
+5. In OBS: add a **Browser Source** to your scene → paste that URL → set
+   width/height to match your OBS canvas (e.g. 1920x1080) → check **"Shutdown
+   source when not visible"** off if you want alerts to keep working even
+   when the scene isn't focused momentarily. Background renders transparent
+   automatically.
+6. In the StreamElements dashboard, use the **Alertbox → Test Alert** button
+   to fire a test follow alert and confirm it shows up correctly on the OBS
+   preview before going live.
 
 ## Option C — Streamlabs
 
